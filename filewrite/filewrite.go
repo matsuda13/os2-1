@@ -1,8 +1,9 @@
 package filewrite
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func Hello(name string) string {
-	message := fmt.Sprintf("%v、こんにちは", name)
-	return message
+func Fwrite() {
+	fmt.Println("File Writeします")
 }
