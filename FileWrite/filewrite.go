@@ -5,6 +5,7 @@ import (
 	"time"
 	"os"
 	"bufio"
+	"log"
 )
 
 
@@ -13,11 +14,11 @@ func FWrite(buffersize int, filepath string, filesize int) int {
 	n_loop := 20
 	total := 0
 	for i:=0;i<n_loop;i++{
-		//10回繰り返して平均をとる
+		//n_loopの回数だけ繰り返して平均をとる
 	    start := time.Now()
     	f, err := os.Create(filepath)
 	    if err!=nil{
-    		panic(err)
+    		log.Fatal(err)
 	    }
     	defer f.Close()
 	    buf := bufio.NewWriterSize(f, buffersize)
