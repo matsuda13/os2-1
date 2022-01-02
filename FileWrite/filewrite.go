@@ -1,7 +1,7 @@
 package filewrite
 
 import (
-	"fmt"
+	//"fmt"
 	"time"
 	"os"
 	"bufio"
@@ -26,14 +26,14 @@ func FWrite(buffersize int, filepath string, filesize int) int {
 		    	f.Write([]byte("0"))
     		}
 			t = int(time.Since(start).Microseconds())
-	    	fmt.Printf("経過:%vμs\n", t)
+	    	//fmt.Printf("経過:%vμs\n", t)
     	} else {
 			for i := 0; i <filesize; i++ {
 		        buf.Write([]byte("0"))
         	}
 	        buf.Flush()
 			t = int(time.Since(start).Microseconds())
-	        fmt.Printf("経過:%vμs\n", t)
+	        //fmt.Printf("経過:%vμs\n", t)
 		}
 		total += t;
 	}
