@@ -1,5 +1,5 @@
 set terminal svg
-set output "out.svg"
+set output "./out/out.svg"
 set title "relation of buffersize and processing speed"
 set xlabel "buffersize(byte)"
 set ylabel "processing speed(Mb/s)"
