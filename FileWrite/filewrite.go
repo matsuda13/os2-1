@@ -14,7 +14,6 @@ func FWrite(buffersize int, filepath string, filesize int) int {
 	n_loop := 20
 	total := 0
 	for i:=0;i<n_loop;i++{
-		//n_loopの回数だけ繰り返して平均をとる
 	    start := time.Now()
     	f, err := os.Create(filepath)
 	    if err!=nil{
