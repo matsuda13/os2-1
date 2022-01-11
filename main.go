@@ -33,5 +33,4 @@ func main() {
 		buf := []byte(str)
 		f.Write(buf)
 	}
-	//変更2
 }
